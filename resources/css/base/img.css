@@ -1,0 +1,15 @@
+img,
+svg {
+    @apply block;
+    @apply align-middle;
+    @apply italic;
+
+    max-width: 100%;
+}
+
+img[width],
+img[height],
+svg[width],
+svg[height] {
+    max-width: none;
+}

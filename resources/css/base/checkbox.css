@@ -1,0 +1,85 @@
+/*
+input[type=checkbox],
+input[type=radio],
+.input--checkbox,
+.input--radio {
+    @apply h-18;
+    @apply w-18;
+    @apply mr-8;
+    @apply align-middle;
+    @apply border-0;
+    @apply flex;
+    @apply items-center;
+
+    box-shadow: none;
+
+    -webkit-appearance: none !important;
+       -moz-appearance: theme('colors.transparent');
+
+
+    &:hover {
+        &:after {
+            @apply border-orange-500;
+        }
+    }
+
+    &:focus {
+        @apply outline-none;
+
+        &:after {
+            @apply border-orange-500;
+        }
+    }
+
+    &:checked {
+        &:after {
+            @apply bg-orange-500;
+            @apply border-orange-500;
+        }
+
+        &:before {
+            transform: scale(1);
+        }
+    }
+
+    &:after {
+        content: '';
+
+        @apply absolute;
+        @apply top-0;
+        @apply left-0;
+        @apply h-18;
+        @apply w-18;
+        @apply overflow-hidden;
+        @apply bg-transparent;
+        @apply border;
+        @apply border-black;
+
+        transition: .3s ease background-color, .3s ease border-color;
+    }
+
+    &:before {
+        @apply absolute;
+        @apply z-10;
+
+        transform: scale(0);
+        transition: transform .1s;
+    }
+}
+
+input[type=checkbox],
+.input--checkbox {
+    &:after {
+        @apply rounded-none;
+    }
+
+    &:before {
+        content: '✓';
+
+        @apply text-18;
+        @apply leading-tight;
+        @apply w-full;
+        @apply text-center;
+        @apply text-black;
+    }
+} */

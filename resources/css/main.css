@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+@import 'https://fonts.googleapis.com/css?family=Chivo|Poppins:400,500';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* purgecss start ignore */
+@import './base/*';
+@import './components/*';
+@import './vendor/*';
+/* purgecss end ignore */
+
+@import 'tailwindcss/utilities';

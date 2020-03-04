@@ -1,0 +1,66 @@
+@define-mixin shape-circle $size, $display: inline-block, $color: transparent {
+    @apply overflow-hidden;
+    @apply rounded-full;
+    @apply text-center;
+
+    content: '';
+
+    line-height: $size;
+
+    display: $display;
+    width: $size;
+    height: $size;
+
+    background-color: $color;
+}
+
+@define-mixin shape-rectangle $aspect-ratio, $display: inline-block, $color: transparent {
+    @apply overflow-hidden;
+    @apply w-full;
+    @apply block;
+    @apply h-0;
+
+    content: '';
+
+    padding-bottom: $aspect-ratio;
+
+    background-color: $color;
+}
+
+@define-mixin shape-square $size, $display: inline-block, $color: transparent {
+    @apply inline-block;
+    @apply text-center;
+    @apply h-0;
+
+    content: '';
+
+    width: $size;
+    padding-bottom: 100%;
+
+    background-color: $color;
+}
+
+
+@define-mixin shape-triangle-down $size, $display: inline-block, $color: transparent {
+    @apply w-0 h-0;
+
+    content: '';
+
+    display: $display;
+
+    border-color: $color transparent transparent transparent;
+    border-style: solid;
+    border-width: $size;
+}
+
+@define-mixin shape-triangle-up $size, $display: inline-block, $color: black {
+    @apply w-0 h-0;
+
+    content: '';
+
+    display: $display;
+
+    border-color: transparent transparent $color transparent;
+    border-style: solid;
+    border-width: $size;
+}

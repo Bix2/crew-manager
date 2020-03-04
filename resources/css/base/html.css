@@ -1,0 +1,12 @@
+html {
+    @apply font-chivo;
+    @apply font-normal;
+    @apply text-base;
+    @apply antialiased;
+
+    @apply overflow-y-scroll;
+    @apply min-h-full;
+
+    height: 100%;
+    box-sizing: border-box;
+}

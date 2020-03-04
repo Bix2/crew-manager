@@ -1,0 +1,46 @@
+h1,
+.heading-1 {
+    @apply font-poppins font-semibold;
+    @apply text-48;
+    @apply normal-case;
+    @apply leading-none;
+    @apply mb-40;
+
+    @screen sm {
+        @apply text-56;
+    }
+
+    @screen md {
+        @apply text-88;
+    }
+
+    strong {
+        @apply text-orange-500;
+    }
+}
+
+h2,
+.heading-2 {
+    @apply font-poppins font-semibold;
+    @apply text-24;
+    @apply leading-none;
+    @apply text-black;
+
+    @screen lg {
+        @apply text-32;
+        @apply leading-none;
+    }
+}
+
+h3,
+.heading-3 {
+    @apply font-poppins font-semibold;
+    @apply text-18;
+    @apply leading-tight;
+    @apply mb-12;
+    @apply uppercase;
+
+    @screen xs {
+        @apply mb-32;
+    }
+}

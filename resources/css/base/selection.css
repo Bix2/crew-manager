@@ -1,0 +1,5 @@
+
+::selection {
+    @apply bg-orange-200;
+    @apply text-orange-900;
+}

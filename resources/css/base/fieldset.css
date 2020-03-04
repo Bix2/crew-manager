@@ -1,0 +1,9 @@
+fieldset {
+    @apply mb-0;
+
+    transition: margin-top 0.6s cubic-bezier(0, 0, 0, 1);
+
+    &:last-child {
+        @apply mt-48;
+    }
+}

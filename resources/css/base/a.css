@@ -1,0 +1,6 @@
+a,
+a:focus {
+    @apply no-underline;
+    @apply outline-none;
+    -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,12 @@
+/*
+@custom-selector :--is-loaded body.is-loaded;
+
+.c-example {
+    @apply opacity-0;
+
+    :--is-loaded & {
+        @apply opacity-100;
+    }
+}
+*/
+
