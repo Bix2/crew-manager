@@ -1,0 +1,23 @@
+/* .multiselect--above .multiselect__content-wrapper {
+    @apply top-0;
+} */
+.multiselect__tags {
+    @apply text-16 !important;
+}
+
+.multiselect__placeholder {
+    @apply text-gray-400 !important;
+}
+
+.multiselect__select:before {
+    @apply z-50;
+}
+
+.multiselect__tags {
+    @apply border border-solid border-gray-200 bg-white !important;
+    border-radius: theme('spacing.4') !important;
+}
+
+.multiselect__input:focus, .multiselect__single:focus {
+    @apply border-none !important;
+}

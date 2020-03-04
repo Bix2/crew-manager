@@ -61,7 +61,15 @@ class CrewController extends Controller
 
     public function update(Request $request, $id)
     {
-    
+        $developer = Developer::find($id);
+        $developer->first_name = $request['data']['first_name'];
+        $developer->last_name = $request['data']['last_name'];
+        $developer->role_id = $request['data']['role']['id'];
+
+        $frameworks = collect($request['data']['frameworks'])->pluck('id');
+        $developer->save();
+        $developer->frameworks()->sync($frameworks);
+        return response()->json($developer);
     }
 
     /*
