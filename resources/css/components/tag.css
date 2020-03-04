@@ -1,0 +1,9 @@
+.c-tag {
+    @apply py-4 px-4;
+    border-radius: theme('spacing.4');
+    @apply border border-solid border-gray-500;
+
+    &:not(first-child) {
+        @apply ml-4;
+    }
+}

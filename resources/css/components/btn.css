@@ -1,0 +1,47 @@
+.c-btn {
+    @apply text-16 font-medium;
+    @apply leading-none;
+    @apply inline-block;
+    @apply align-middle;
+    @apply text-center;
+    @apply m-0;
+    @apply border border-solid;
+    @apply relative;
+    @apply py-8 px-20;
+    @apply overflow-hidden;
+    @apply leading-button;
+    border-radius: theme('spacing.24');
+    transition: color 0.6s cubic-bezier(0, 0, 0, 1);
+}
+
+.c-btn--green {
+    @apply font-semibold;
+    @apply border-green-500;
+    @apply text-green-500;
+} 
+
+.c-btn--red {
+    @apply font-semibold;
+    @apply border-red-500;
+    @apply text-red-500;
+}
+
+.c-btn--link {
+    @apply font-semibold;
+    @apply border-none;
+    @apply text-gray-300;
+}
+
+.c-btn--underline {
+    @apply p-0;
+    @apply border-none;
+    @apply text-gray-300;
+    border-radius: 0;
+
+    &:after {
+        content: "";
+        @apply absolute left-0 bottom-0;
+        @apply w-full h-px;
+        @apply bg-gray-300;
+    }
+}

@@ -1,0 +1,8 @@
+.c-dashboard {
+    &__item {
+        @apply flex items-center;
+        @apply mb-16 py-20;
+        @apply border border-solid border-gray-200 bg-white;
+        border-radius: theme('spacing.4');
+    }
+}
