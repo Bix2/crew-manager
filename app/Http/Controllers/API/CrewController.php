@@ -42,7 +42,15 @@ class CrewController extends Controller
 
     public function store(Request $request)
     {
+        $developer = new Developer;
+        $developer->first_name = $request->first_name;
+        $developer->last_name = $request->last_name;
+        $developer->role_id = $request->role_id;
+        $frameworks = $request->input('frameworks.*.id');
+        $developer->save();
+        $developer->frameworks()->attach($frameworks);
        
+        return response()->json($developer);
     }
 
     /*
