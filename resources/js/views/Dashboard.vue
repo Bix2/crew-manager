@@ -16,6 +16,28 @@
     <div class="c-content min-h-screen bg-gray-100">
         <div class="wrap py-48">
             <div v-if="developers" class="grid">
+                
+                <div class="grid-col w-full">
+                    <div class="c-filters w-full flex justify-end">
+                        <div class="c-filters__item c-form__group w-1/4 mr-8">
+                            <select v-model="selectedRole">
+                                <option selected value="">Filter by role</option>
+                                <option :value="role.title" v-for="role in roles" :key="role.id">
+                                    {{ role.title }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="c-filters__item c-form__group w-1/4">
+                            <select v-model="selectedFramework">
+                                <option selected value="">Filter by framework</option>
+                                <option :value="framework.title" v-for="framework in frameworks" :key="framework.id">
+                                    {{ framework.title }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="grid-col py-16 w-full flex text-gray-300 text-14">
                     <div class="w-1/12">
                         &nbsp;
@@ -102,6 +124,19 @@ export default {
             'roles',
             'frameworks'
         ]),
+         filteredList() {
+            // if no filters applied, return list of all developers
+			if(this.selectedRole === "" && this.selectedFramework === "") {
+                return this.developers;
+            } else {
+                return this.developers.filter(person => {
+                     // role filter applied
+                    return (this.selectedRole === '' || person.role.title === this.selectedRole) && 
+                     // framework filter applied
+                    (this.selectedFramework === '' || person.frameworks.some((subElement) => subElement.title === this.selectedFramework))
+                })
+            }
+        }
     }
 }
 </script>
